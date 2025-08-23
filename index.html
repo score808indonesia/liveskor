@@ -131,17 +131,8 @@ a.a_btn{line-height:1.5em;display:inline-block;text-align:center;background:hsl(
   font-size: 1.2rem;
   color: #ccc;
 }
-  .sticky-ads {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  z-index: 9999;
-  background: #fff;
-  text-align: center;
-  padding: 5px 0;
-  box-shadow: 0 -2px 6px rgba(0,0,0,0.1);
-}
+.sticky-ads{position:fixed;bottom:0;left:0;right:0;z-index:9999;background:#fff;text-align:center;padding:10px 0 5px;box-shadow:0 -2px 6px rgb(0 0 0 / .15);max-height:90px}.close-ads{position:absolute;top:2px;right:6px;background:#ff4d4f;color:#fff;border:none;border-radius:50%;font-size:18px;width:28px;height:28px;line-height:26px;text-align:center;cursor:pointer;z-index:10000}.close-ads:hover{background:#d9363e}@media (max-width:600px){.sticky-ads{padding:5px 0;max-height:70px}.close-ads{font-size:16px;width:24px;height:24px;line-height:22px}}
+  
 :root{--bg:#f9fafb;--text:#1f2937;--accent:#2563eb}
 #about{background:var(--bg);color:var(--text);max-width:800px;margin:2rem auto;padding:clamp(1rem,4vw,2rem);border-radius:1rem;box-shadow:0 4px 20px rgba(0,0,0,0.08);transition:all 0.3s ease}
 #about h2{font-size:clamp(1.5rem,2.5vw,2rem);margin-bottom:1rem;color:var(--accent);text-align:center}
@@ -300,7 +291,9 @@ a.a_btn{line-height:1.5em;display:inline-block;text-align:center;background:hsl(
     <span>Tentang</span>
   </a>
 </div>
-<div class="sticky-ads">
+<!-- Sticky Ads dengan Tombol Close -->
+<div class="sticky-ads" id="stickyAds">
+  <button class="close-ads" onclick="document.getElementById('stickyAds').style.display='none'">×</button>
 <ins class="adsbygoogle"
      style="display:inline-block;width:728px;height:90px"
      data-ad-client="ca-pub-6264483052991753"
@@ -309,7 +302,6 @@ a.a_btn{line-height:1.5em;display:inline-block;text-align:center;background:hsl(
      (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
 </div>
-
   <footer class="main-footer container">
   <div class="footer-container">
     <div class="footer-column">
