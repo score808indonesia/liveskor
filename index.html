@@ -58,8 +58,8 @@
   document.addEventListener("DOMContentLoaded", () => {
     const slug = getSlug();
     const canonicalUrl = slug
-      ? `https://score808.candil.eu.org/liveskor/${slugify(slug)}`
-      : "https://score808.candil.eu.org/liveskor/";
+      ? `https://skor.candil.eu.org/${slugify(slug)}`
+      : "https://skor.candil.eu.org/";
 
     // Canonical
     const link = document.querySelector('link[rel="canonical"]');
@@ -197,9 +197,7 @@ a.a_btn{line-height:1.5em;display:inline-block;text-align:center;background:hsl(
 <body>
 <!-- NAVBAR VIDIO STYLE -->
 <nav class="navbar">
-<h1>
   <a href="https://skor.candil.eu.org/" class="logo" title="Live Skor Terupdate">Live Skor</a>
-</h1>
   <div class="menu-toggle" onclick="toggleMenu()">☰</div>
   <div class="nav-links" id="navLinks">
     <a href="https://skor.candil.eu.org/">Beranda</a>
