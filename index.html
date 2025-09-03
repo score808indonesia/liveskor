@@ -378,7 +378,7 @@ function renderMatchCard(item){const link=`https://skor.candil.eu.org/#${slugify
 function lazyLoadImages(){const images=document.querySelectorAll('img.lazy');const observer=new IntersectionObserver((entries)=>{entries.forEach(entry=>{if(entry.isIntersecting){const img=entry.target;img.src=img.getAttribute('data-src');img.classList.remove('lazy');observer.unobserve(img)}})});images.forEach(img=>observer.observe(img))}
 fetch(csvUrl).then(res=>res.text()).then(csvText=>{const matchData=parseCsv(csvText);matchData.forEach(item=>renderMatchCard(item));lazyLoadImages()})
 </script>
-<script>
+<!--<script>
 //<![CDATA[
 var lazyadsense = false;
 window.addEventListener("scroll", function(){
@@ -388,13 +388,12 @@ lazyadsense = true;
   }
 }, true);
 //]]>
-</script>
+</script>-->
 <!--<script>
 //<![CDATA[
 function downloadJSAtOnload(){var d=document.createElement("script");d.src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6264483052991753";d.setAttribute("crossorigin","anonymous"),document.body.appendChild(d)}window.addEventListener?window.addEventListener("load",downloadJSAtOnload,!1):window.attachEvent?window.attachEvent("onload",downloadJSAtOnload):window.onload=downloadJSAtOnload;
 //]]>
 </script>-->
-  
 <script>
   function toggleMenu() {
     document.getElementById("navLinks").classList.toggle("show");
